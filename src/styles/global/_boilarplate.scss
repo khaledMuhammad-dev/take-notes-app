@@ -1,0 +1,31 @@
+@use "../util" as util;
+
+html,
+body,
+*::after,
+*::before,
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: util.$font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+ul {
+  margin-block: 0;
+  padding-left: 0;
+
+}
+
+li {
+  list-style: none;
+}
