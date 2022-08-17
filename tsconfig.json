@@ -9,11 +9,11 @@
     "baseUrl": "src",
     "paths": {
         "=>@src/*": ["./src/*"],
-        "=>@components/*": ["./src/components/*"],
         "=>@assets/*": ["./src/assets/*"],
+        "=>@components/*": ["./src/components/*"],
         "=>@store/*": ["./src/store/*"],
-        "=>@utils/*": ["./src/utils/*"],
         "=>@styles/*": ["./src/styles/*"],
+        "=>@utils/*": ["./src/utils/*"],
         "=>@viwes/*": ["./src/viwes/*"],
     },
     "allowJs": true,
