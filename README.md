@@ -3,19 +3,19 @@
 
 You can type down your notes where you can able to style text, add icons, add external images and resources plus more to your notes, and this is because we are using the markdown feature to make your life easer and more orgnized.
 
-# App Status
+## App Status
 
 This application is under construction.
 
-# Technology stack
+## Technology stack
 
-## Front-End
+### Front-End
 
 - React
 - Redux-toolkit
 - Sass (SCSS)
 
-# Installation
+## Installation
 
 To run this project on your machine you will need to install node.js and npm package manager which comes with node.js by default
 so all you need is to visit node.js website download and install.
