@@ -6,6 +6,16 @@
       "dom.iterable",
       "esnext"
     ],
+    "baseUrl": "src",
+    "paths": {
+        "=>@src/*": ["./src/*"],
+        "=>@components/*": ["./src/components/*"],
+        "=>@assets/*": ["./src/assets/*"],
+        "=>@store/*": ["./src/store/*"],
+        "=>@utils/*": ["./src/utils/*"],
+        "=>@styles/*": ["./src/styles/*"],
+        "=>@viwes/*": ["./src/viwes/*"],
+    },
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
