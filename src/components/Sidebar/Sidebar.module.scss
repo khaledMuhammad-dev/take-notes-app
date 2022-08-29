@@ -1,0 +1,27 @@
+@use "../../styles/util" as util;
+
+.wrapper {
+  position: fixed;
+  width: 100%;
+  z-index: 11;
+  overflow-x: auto;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+
+  @include util.breakpoint-up("lg") {
+    position: relative;
+  }
+}
+
+.container {
+  padding: 70px 1rem 0;
+  background: var(--navy-light);
+  min-height: 100vh;
+  max-width: 288px;
+  pointer-events: painted;
+
+  @include util.breakpoint-up("lg") {
+    padding: 24px 1rem 0;
+  }
+}
