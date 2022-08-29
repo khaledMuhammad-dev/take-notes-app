@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, MouseEvent, MouseEventHandler } from "react";
 import { Stack, useTheme, IconButton } from "@mui/material";
 // Components ---
 import { Button, TextInput } from "@components/inputs";
@@ -20,8 +20,16 @@ export const Sidebar = React.forwardRef<HTMLDivElement, ISidebar>(
     const { wrapper, container } = styles;
     const theme = useTheme();
 
+    const handleOverlay = (e: MouseEvent<HTMLDivElement>) => {
+      const containerEl = document.querySelector(
+        "." + container
+      ) as HTMLDivElement;
+      if (!containerEl.contains(e.target as Node)) {
+        handleToggle(false);
+      }
+    };
     return (
-      <div className={wrapper} ref={ref}>
+      <div className={wrapper} ref={ref} onClick={handleOverlay}>
         <div className={container}>
           <Stack
             color={theme.customColors.textColor}
