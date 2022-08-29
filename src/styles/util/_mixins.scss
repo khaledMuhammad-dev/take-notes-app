@@ -1,4 +1,18 @@
 @mixin squire($size) {
-    width: $size + px;
-    height: $size + px;
+  width: $size + px;
+  height: $size + px;
+}
+
+$breakpoints-up: (
+  "xs": 0,
+  "small": 37.5em,
+  "medium": 56.25em,
+  "lg": 75em,
+  "xlg": 87.5em,
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
 }
