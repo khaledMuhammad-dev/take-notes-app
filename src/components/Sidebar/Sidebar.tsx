@@ -28,6 +28,7 @@ export const Sidebar = React.forwardRef<HTMLDivElement, ISidebar>(
         handleToggle(false);
       }
     };
+
     return (
       <div className={wrapper} ref={ref} onClick={handleOverlay}>
         <div className={container}>
@@ -67,7 +68,7 @@ export const Sidebar = React.forwardRef<HTMLDivElement, ISidebar>(
 
         {!matchQuery && (
           <BodyPortal>
-            <Overlay handleToggle={handleToggle} />
+            <Overlay />
           </BodyPortal>
         )}
       </div>

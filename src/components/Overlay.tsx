@@ -2,12 +2,12 @@ import { Box } from "@mui/system";
 import { FC } from "react";
 
 interface IOverlay {
-  handleToggle: (val?: boolean) => void;
+  handleToggle?: (val?: boolean) => void;
 }
 export const Overlay: FC<IOverlay> = ({ handleToggle }) => {
   return (
     <Box
-      onClick={() => handleToggle(false)}
+      onClick={handleToggle ? () => handleToggle(false) : () => null}
       className="overlay"
       sx={{
         position: "fixed",
