@@ -1,4 +1,4 @@
-// import { useEffect } from "react";
+import { useEffect } from "react";
 import { useToggle } from "@/utils/hooks";
 import { Slide, Theme, useMediaQuery } from "@mui/material";
 import { Navbar } from "@components/Navbar/Navbar";
@@ -8,14 +8,17 @@ export const Header = () => {
   const [toggle, handleToggle] = useToggle();
   const matches = useMediaQuery((theme: Theme) => theme.breakpoints.up("lg"));
 
-  // useEffect(() => {
-  //   const handleResize = () => handleToggle(false);
-  //   window.addEventListener("resize", handleResize);
+  useEffect(() => {
+    const handleResize = () => {
+      if (matches) handleToggle(false);
+    };
 
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, [handleToggle]);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [handleToggle, matches]);
 
   return (
     <header>
